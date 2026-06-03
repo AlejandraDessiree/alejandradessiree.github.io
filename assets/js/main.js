@@ -23,3 +23,18 @@ const linkAction = () =>{
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+const contactForm = document.getElementById('contact-form'),
+    contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) =>{
+    e.preventDefault()
+    emailjs.sendForm('service_8f1tj9i', 'template_q82tiw8', '#contact-form', 'XqQz7wdQHOx-rCzbE')
+    .then(() => {
+        contactMessage.textContent = 'Message sent succesfully!'
+    }, () =>{
+        contactMessage.textContent = 'Message not sent (service error)'
+    })
+}
+
+contactForm.addEventListener('submit', sendEmail)
