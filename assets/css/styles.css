@@ -227,7 +227,9 @@ svg {
 }
 
 .about__container{
-  row-gap: 2.5rem;
+  margin: 0;
+  width: 100%;
+  row-gap: 2rem;
 }
 
 .about__data{
@@ -328,6 +330,11 @@ svg {
 .nav__close,
 .nav__toggle{
   display: none;
+}
+
+.container__experience{
+  margin: 0;
+  background-color: var(--container-color);
 }
 
 /* Navigation for mobile devices */
