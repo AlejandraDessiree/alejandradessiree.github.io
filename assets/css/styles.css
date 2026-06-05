@@ -135,11 +135,10 @@ svg {
   margin: 10px auto;
   border-radius: 2rem;
   position: fixed;
-  width: 90%;
+  left: 1.5rem;
+  right: 1.5rem;
   background-color: var(--container-color);
   top: 0;
-  left: 0;
-  right: 0;
   z-index: var(--z-fixed);
 }
 
@@ -227,8 +226,9 @@ svg {
 }
 
 .about__container{
-  margin: 0;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 2560px;
+  padding: 2rem 1.5rem;
   row-gap: 2rem;
 }
 
@@ -333,8 +333,36 @@ svg {
 }
 
 .container__experience{
-  margin: 0;
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  height: auto;
+}
+
+.experience-card{
+  padding: 1.75rem;
+  height: auto;
+  border-radius: 1.5rem;
   background-color: var(--container-color);
+}
+
+.experience-card__title span{
+  color: var(--first-color-alt);
+}
+
+.experience-card__title{
+  justify-self: left;
+  color: var(--first-color);
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+
+.about__description{
+  text-align: left;
+  color: var(--first-color-alt);
+  font-size: var(--normal-font-size);
+  margin-bottom: 1rem;
 }
 
 /* Navigation for mobile devices */
@@ -408,8 +436,10 @@ svg {
   .about__container,
   .projects__container,
   .contact__container,
-  .footer__container{
-    grid-template-columns: 360px;
+  .footer__container,
+  .container__experience{
+    grid-template-columns: auto;
+    margin: 2rem;
     justify-content: center;
   }
 
@@ -423,6 +453,28 @@ svg {
     .projects__container{
       grid-template-columns: repeat(2, 1fr);
     }
+
+  .contact__form,
+  .contact__group{
+  display: grid;
+  row-gap: 1rem;
+  }
+
+  .contact__form{
+  position: relative;
+  }
+
+  .contact__input{
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  background-color: var(--container-color);
+  }
+
+  .contact__form textarea{
+  height: 11rem;
+  resize: none;
+  margin-bottom: 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px){
@@ -443,7 +495,7 @@ svg {
     display: flex;
     flex-direction: row;
     column-gap: 3rem;
-    margin-left: 20rem;
+    margin-left: auto;
   }
   
     .projects__container{
@@ -453,4 +505,11 @@ svg {
   .home__social{
     justify-content: center;
   }
+
+  .container__experience{
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+}
 }
