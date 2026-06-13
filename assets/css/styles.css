@@ -189,6 +189,10 @@ svg {
   text-align: center;
 }
 
+.certifications{
+  color: var(--first-color-alt);
+}
+
 .home__subtitle,
 .home__education{
   font-size: var(--bigger-font-size);
